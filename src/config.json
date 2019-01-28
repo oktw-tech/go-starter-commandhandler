@@ -1,0 +1,6 @@
+{
+    "AmqpBus":{
+        "amqpUrl" : "amqp://ortrluoo:LYxUKYcvslsxo3xjp8Ehj-IQgxC-f_p5@hound.rmq.cloudamqp.com/ortrluoo",
+        "exchangeName" : "domain.command"
+    }
+}
