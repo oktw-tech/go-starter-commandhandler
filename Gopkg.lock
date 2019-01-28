@@ -26,17 +26,6 @@
 
 [[projects]]
   branch = "master"
-  name = "github.com/betacraft/yaag"
-  packages = [
-    "irisyaag",
-    "middleware",
-    "yaag",
-    "yaag/models"
-  ]
-  revision = "67962f4b77581a1ab1e3492ff26add2c20d29def"
-
-[[projects]]
-  branch = "master"
   name = "github.com/eknkc/amber"
   packages = [
     ".",
@@ -257,12 +246,12 @@
 [[projects]]
   name = "gopkg.in/yaml.v2"
   packages = ["."]
-  revision = "5420a8b6744d3b0345ab293f6fcba19c978f1183"
-  version = "v2.2.1"
+  revision = "51d6538a90f86fe93ac480b35f37b2be17fef232"
+  version = "v2.2.2"
 
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  inputs-digest = "bc01450a367378ebdad5681121f4879c36c8ef15a55a09782e2c5732fc1afe40"
+  inputs-digest = "90ca626a5676ed42b29388d9cc21c5e403ae4e8e08ab520a78927d0998aac0ec"
   solver-name = "gps-cdcl"
   solver-version = 1
