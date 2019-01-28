@@ -26,6 +26,17 @@
 
 [[projects]]
   branch = "master"
+  name = "github.com/betacraft/yaag"
+  packages = [
+    "irisyaag",
+    "middleware",
+    "yaag",
+    "yaag/models"
+  ]
+  revision = "67962f4b77581a1ab1e3492ff26add2c20d29def"
+
+[[projects]]
+  branch = "master"
   name = "github.com/eknkc/amber"
   packages = [
     ".",
@@ -252,6 +263,6 @@
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  inputs-digest = "90ca626a5676ed42b29388d9cc21c5e403ae4e8e08ab520a78927d0998aac0ec"
+  inputs-digest = "b7e89bc6b3be48ec0fb6055d481933d431beec83deff9c6c929c36c84019de70"
   solver-name = "gps-cdcl"
   solver-version = 1

@@ -4,6 +4,8 @@ import (
 	"fmt"
 	"go-starter-commandhandler/src/application"
 
+	"github.com/betacraft/yaag/irisyaag"
+	"github.com/betacraft/yaag/yaag"
 	"github.com/kataras/iris"
 	"github.com/kataras/iris/middleware/logger"
 	"github.com/kataras/iris/middleware/recover"

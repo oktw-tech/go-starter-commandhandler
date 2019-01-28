@@ -1,0 +1,1 @@
+{"ApiSpecs":[{"HttpVerb":"GET","Path":"/service","Calls":[{"Id":0,"CurrentPath":"/service","MethodType":"GET","PostForm":null,"RequestHeader":{"Upgrade-Insecure-Requests":" 1\r"},"CommonRequestHeaders":null,"ResponseHeader":{},"RequestUrlParams":{},"RequestBody":"","ResponseBody":"service controller","ResponseCode":200}]}]}

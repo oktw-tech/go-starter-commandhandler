@@ -24,7 +24,7 @@
 #   go-tests = true
 #   unused-packages = true
 
-required = ["github.com/kataras/iris", "github.com/betacraft/yaag", "github.com/streadway/amqp"]
+required = ["github.com/kataras/iris"]
 
 [[constraint]]
   name = "github.com/kataras/iris"
