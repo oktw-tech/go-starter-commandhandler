@@ -9,7 +9,10 @@ import (
 type JSONConfig struct {
 	AmqpBus struct {
 		AmqpURL      string `json:"amqpUrl"`
+		ConsumerName string `json:"consumerName"`
 		ExchangeName string `json:"exchangeName"`
+		ExchangeType string `json:"exchangeType"`
+		QueueName    string `json:"queueName"`
 	}
 }
 

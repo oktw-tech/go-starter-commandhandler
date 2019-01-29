@@ -78,6 +78,9 @@ func (rabbitMqProvider *RabbitMqProvider) ListenExchange(bindingKey string) {
 	jSONConfig := configuration.JSONConfig{}
 	err := jSONConfig.LoadConfiguration("config.json")
 	exchangeName := jSONConfig.AmqpBus.ExchangeName
+	exchangeType := jSONConfig.AmqpBus.ExchangeType
+	queueName := jSONConfig.AmqpBus.QueueName
+	consumerName := jSONConfig.AmqpBus.ConsumerName
 
 	connection := rabbitMqProvider.GetConnection()
 	defer connection.Close()
@@ -88,7 +91,7 @@ func (rabbitMqProvider *RabbitMqProvider) ListenExchange(bindingKey string) {
 
 	err = channel.ExchangeDeclare(
 		exchangeName, // name
-		"topic",      // type
+		exchangeType, // type
 		true,         // durable
 		false,        // auto-deleted
 		false,        // internal
@@ -98,12 +101,12 @@ func (rabbitMqProvider *RabbitMqProvider) ListenExchange(bindingKey string) {
 	crosscutting.RaiseError("Failed to declare an exchange", err)
 
 	queue, err := channel.QueueDeclare(
-		"amqp-tester.queue", // name
-		true,                // durable
-		false,               // delete when unused
-		false,               // exclusive
-		false,               // no-wait
-		nil,                 // arguments
+		queueName, // name
+		true,      // durable
+		false,     // delete when unused
+		false,     // exclusive
+		false,     // no-wait
+		nil,       // arguments
 	)
 	crosscutting.RaiseError("Failed to declare a queue", err)
 
@@ -118,13 +121,13 @@ func (rabbitMqProvider *RabbitMqProvider) ListenExchange(bindingKey string) {
 	crosscutting.RaiseError("Failed to bind a queue", err)
 
 	messages, err := channel.Consume(
-		queue.Name,    // queue
-		"amqp-tester", // consumer
-		true,          // auto-ack
-		false,         // exclusive
-		false,         // no-local
-		false,         // no-wait
-		nil,           // args
+		queue.Name,   // queue
+		consumerName, // consumer
+		true,         // auto-ack
+		false,        // exclusive
+		false,        // no-local
+		false,        // no-wait
+		nil,          // args
 	)
 	crosscutting.RaiseError("Failed to register a consumer", err)
 	forever := make(chan bool)
