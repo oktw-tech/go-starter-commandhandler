@@ -1,3 +1,4 @@
 # Folders
 vendor
+.vscode
 *.exe
