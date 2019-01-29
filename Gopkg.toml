@@ -24,19 +24,9 @@
 #   go-tests = true
 #   unused-packages = true
 
-required = ["github.com/kataras/iris"]
-
-[[constraint]]
-  name = "github.com/kataras/iris"
-  version = "10.6.6"
-
 [prune]
   go-tests = true
   unused-packages = true
-
-[[constraint]]
-  branch = "master"
-  name = "github.com/betacraft/yaag"
 
 [[constraint]]
   branch = "master"
